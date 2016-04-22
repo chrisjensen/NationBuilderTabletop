@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="actionsDemo">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Actions Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    {% yield %}
+    
+    <p ng-controller="ActionsController"></p>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+
+    <!-- Add in Tabletop and tabletopProvider -->
+    <script src="tabletop.js"></script>
+    <script src="TabletopProvider.js"></script>
+
+    <!-- other scripts, eg -->
+    <script src="app.js"></script>
+    <script src="actions_factory.js"></script>
+    <script src="actions_controllers.js"></script>
+    
+    {% include "config" %}
+  </body>
+</html>
