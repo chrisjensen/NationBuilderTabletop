@@ -3,5 +3,6 @@ Source code for the demonstration of using [Tabletop](https://github.com/times/a
 See the full blog post here.
 
 ## File Structure
-`theme` the files you would need to put in your theme
-`site` the custom templates for individual pages on your site
+
+* `theme` the files you would need to put in your theme
+* `site` the custom templates for individual pages on your site
