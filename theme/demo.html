@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="actionsDemo">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Actions Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <p ng-controller="ActionsController"></p>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+
+    <!-- Add in Tabletop and tabletopProvider -->
+    <script src="tabletop.js"></script>
+    <script src="TabletopProvider.js"></script>
+
+    <!-- other scripts, eg -->
+    <script src="app.js"></script>
+    <script src="actions_controllers.js"></script>
+    
+<script type="text/javascript">
+(function() {
+	window.config = window.config || {};
+
+	// Save the user tags as an array
+	config.actions_spreadsheet = 'https://docs.google.com/spreadsheets/d/1doC8tt8A2ySJnf8VV1G-Zvgt0OPOzCfO3PL5BDiSohk'
+})();
+</script>
+
+  </body>
+</html>
