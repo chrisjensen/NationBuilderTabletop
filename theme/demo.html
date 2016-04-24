@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="actionsDemo">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Actions Demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>Choose an action</h2>
+<table  ng-controller="ActionsController">
+	<tr ng-repeat="action in actions">
+		<th>{[{ action['Name'] }]}</th>
+		<td>{[{ action['Description'] }]}</td>
+		<td><action-button action="action"></action></td>
+	</tr>
+</table>
+
+
+<script type="text/ng-template" id="action_button.html">
+  <form id="actions_page_new_signup_form" class="ajaxForm signup_form" method="POST" action="/forms/signups" enctype="multipart/form-data"><input name="authenticity_token" type="hidden" value="a secret"/><input name="page_id" type="hidden" value="135"/><input name="return_to" type="hidden" value="http://www.climateforchange.org.au/actions"/>
+
+	  <!-- Tag them when they click the button -->
+	  <input type="hidden" name="signup[optional_tag]" value="{[{ action['Start Tag'] }]}" />
+
+	  <input class="submit-button" type="submit" name="commit" value="Do this!" />
+
+      </form>
+</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+
+    <!-- Add in Tabletop and tabletopProvider -->
+    <script src="tabletop.js"></script>
+    <script src="TabletopProvider.js"></script>
+
+    <!-- other scripts, eg -->
+    <script src="app.js"></script>
+    <script src="actions_factory.js"></script>
+    <script src="actions_controllers.js"></script>
+    
+<script type="text/javascript">
+(function() {
+	window.config = window.config || {};
+
+	// Save the user tags as an array
+	config.actions_spreadsheet = 'https://docs.google.com/spreadsheets/d/1doC8tt8A2ySJnf8VV1G-Zvgt0OPOzCfO3PL5BDiSohk'
+
+	config.page_map = {
+		'act_petition' : 4,
+		'act_write_mp' : 12,
+		'act_talk_friends' : 16
+	};
+})();
+</script>
+
+  </body>
+</html>
