@@ -1,0 +1,19 @@
+<h2>Choose an action</h2>
+<table ng-controller="ActionsController">
+	<tr ng-repeat="action in actions">
+		<th>{[{ action['Name'] }]}</th>
+		<td>{[{ action['Description'] }]}</td>
+		<td><action-button action="action"></action></td>
+	</tr>
+</table>
+
+<script type="text/ng-template" id="action_button.html">
+      {% form_for signup %}
+
+	  <!-- Tag them when they click the button -->
+	  <input type="hidden" name="signup[optional_tag]" value="{[{ action['Start Tag'] }]}" />
+
+	  {% submit_tag "Do this action", class:"pull-right submit-button btn btn-primary" %}
+
+      {% endform_for %}
+</script>
