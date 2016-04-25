@@ -7,6 +7,8 @@ The file `theme/demo.html` has been manually created to demo the Angular code. I
 
 This way, you can run and even step through the Javascript code by launching a simple webserver on your localhost and browsing to `theme/demo.html`
 
+You can launch a live demo of the code at [rawgit](http://rawgit.com/chrisjensen/NationBuilderTabletop/master/theme/demo.html).
+
 ## Repository Layout
 
 * `theme` the files you would need to put in your theme
