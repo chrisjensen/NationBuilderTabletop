@@ -1,6 +1,6 @@
 Source code for the demonstration of using [Tabletop](https://github.com/times/angular-tabletop), Google Sheets and AngularJS to extend NationBuilder signups.
 
-See the full blog post here.
+See the full blog post [here](http://broadthought.co/2016/04/25/using-angularjs-tabletop-google-sheets-extend-signup-pages-user-tracking-nationbuilder/).
 
 ## Demo file
 The file `theme/demo.html` has been manually created to demo the Angular code. It's a compilation of all the includes in the layout.html and the Liquid code is replaced with the static HTML you might expect it to render.
